@@ -1,0 +1,16 @@
+﻿@model ISkillsStore.Models.Product
+<div>
+        <h3>
+            @Html.DisplayFor(modelItem => Model.ProductName)
+        </h3>
+        <p>
+            @Html.DisplayFor(modelItem => Model.Description)
+        </p>
+        <p class="pull-right label label-primary">
+            @Html.DisplayFor(modelItem => Model.Price)
+        </p>
+        <p>
+            @Html.ActionLink("More Info", "Index", "ItemDetail", new { id = Model.ProductID }, new { id = "ProductID" })
+        </p>
+</div>
+

@@ -1,0 +1,29 @@
+﻿@model ISkillsStore.Models.Product
+
+@{
+    ViewBag.Title = "ISkills Shop";
+}
+
+<h2>
+    Online Store
+</h2>
+<div style="display:inline-block">
+    <div style="width:190px; float:left;">
+        <img src="@Model.Image" width="170" height="276" alt="@Model.ProductName" title="@Model.ProductName">
+    </div>
+    <div style="width:70%; float:left;">
+        <h1>
+            @Html.DisplayFor(modelItem => Model.ProductName)
+        </h1>
+        <p>
+@*            @Html.DisplayFor(modelItem => Model.Details)*@
+            @Html.Raw(@Model.Details)
+        </p>
+        <p>
+            $@Html.DisplayFor(modelItem => Model.Price)
+        </p>
+        <p>
+            @Html.ActionLink("More Info", "Index", "Info", new { id = Model.ProductID }, new { id = "ProductID" })
+        </p>
+    </div>
+</div>

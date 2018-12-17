@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Jq.Grid</id>
+    <version>1.1.3</version>
+    <title>ASP.NET MVC JQGrid</title>
+    <authors>Aiska</authors>
+    <owners>Aiska</owners>
+    <projectUrl>https://github.com/aiska/Jq.Grid</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>This plugin is used to help integrate jqGrid into ASP.NET MVC and Entity framework with A fluent html helper which eases the the implementation of jqGrid in ASP.NET MVC applications. Support for Razor and WebForms view engine. JqGrid modelbinder included.</description>
+    <copyright>Aiska Hendra 2013</copyright>
+    <language>en-US</language>
+    <tags>ASP.NET MVC JQGrid</tags>
+    <dependencies>
+      <dependency id="Newtonsoft.Json" version="5.0.3" />
+    </dependencies>
+  </metadata>
+</package>

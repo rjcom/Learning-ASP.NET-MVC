@@ -1,0 +1,82 @@
+﻿body
+{
+    background-color: #dcdcfa;
+    margin: 8px;
+    padding: 0;
+    color: #050f6f;
+}
+
+h2
+{
+    color: #000000;
+    background-color: #ffffff;
+    padding: 10px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+a
+{
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
+
+a:link
+{
+    color: #034af3;
+    padding: 10px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 2.8em;
+    background-color: rgb(248, 247, 246);
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+a:hover
+{
+    text-decoration: none;
+    cursor:pointer;
+    color: rgb(248, 247, 246);
+    background-color: #034af3;
+    text-decoration: none;
+}
+
+a:visited
+{
+    color: #034af3;
+}
+
+.btn
+{
+    font-family: 'Times New Roman';
+    font-size: inherit;
+    border-style:none;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    color: #034af3;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 2.8em;
+    background-color: rgb(248, 247, 246);
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.btn.down
+{
+    text-decoration: none;
+    cursor:pointer;
+    color: rgb(248, 247, 246);
+    background-color: #034af3;
+    text-decoration: none;
+}
+
+.btn:hover
+{
+    text-decoration: none;
+    cursor:pointer;
+    color: rgb(248, 247, 246);
+    background-color: #034af3;
+    text-decoration: none;
+}

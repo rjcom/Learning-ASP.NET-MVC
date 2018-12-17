@@ -1,0 +1,35 @@
+﻿@model ISkillsStore.Models.ProductsModel
+
+@{
+    ViewBag.Title = "ISkills Shop";
+}
+
+<h2>
+    Online Store
+</h2>
+@foreach (var item in Model.Products)
+{
+    <div class="row panel">
+        <div class="col-xs-4">
+            <img src="@item.Image" alt="@item.ProductName" title="@item.ProductName">
+        </div>
+        <div class="well col-xs-8">
+            <h3>
+                @Html.DisplayFor(modelItem => item.ProductName)
+            </h3>
+            <p>
+                @Html.DisplayFor(modelItem => item.Description)
+            </p>
+            <p class="pull-right label label-primary">
+                $@Html.DisplayFor(modelItem => item.Price)
+            </p>
+            <p>
+                @Html.ActionLink("More Info", "Index", "ItemDetail", new { id = item.ProductID }, new { id = "ProductID" })
+            </p>
+        </div>
+    </div>
+}
+
+<div class="btn-group pull-right">
+    @Html.PageLinks(Model.Pagination, x => Url.Action("Index", new { page = x }))
+</div>

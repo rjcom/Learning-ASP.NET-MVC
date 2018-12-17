@@ -1,0 +1,22 @@
+﻿@model ISkillsStore.Models.Customer
+@{
+    ViewBag.Title = "ISkills Login";
+}
+
+<h3>Log In:</h3>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true, "Login failed. Check your login details.");
+    <div class="form-group">
+        <label>Email Address</label>
+        @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Password</label>
+        @Html.PasswordFor(x => x.Password, new { @class = "form-control" })
+    </div>
+
+    <div class="text-center">
+        <input class="btn btn-primary" type="submit" value="Log In" />
+    </div>
+}

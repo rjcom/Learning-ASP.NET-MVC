@@ -1,0 +1,10 @@
+﻿@model Razor.Models.Address
+
+@{
+    ViewBag.Title = "Address";
+    //Layout = null;
+}
+
+<h2>Address</h2>
+<div>@Model.Street</div>
+<div>@Model.City, @Model.State @Model.PostalCode</div>

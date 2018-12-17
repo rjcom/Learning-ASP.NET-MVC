@@ -1,0 +1,17 @@
+﻿@model ISkillsStore.Models.ProductsModel
+
+@{
+    ViewBag.Title = "ISkills Shop";
+}
+
+<h2>
+    Online Store
+</h2>
+@foreach (var item in Model.Products)
+{
+    @Html.Partial("Product", item)
+}
+
+<div class="btn-group pull-right">
+    @Html.PageLinks(Model.Pagination, x => Url.Action("Index", new { page = x }))
+</div>

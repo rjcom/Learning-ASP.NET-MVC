@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <script src="@Url.Content("~/Scripts/jquery-1.9.1.min.js")" type="text/javascript"></script>
+
+    <link rel="stylesheet" type="text/css" href="~/Content/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/bootstrap-theme.css" />
+
+</head>
+<body>
+    <div class="navbar navbar-inverse" role="navigation">
+        <h1 id="header" class="navbar-text h1">ISkills Store</h1>
+        @Html.Action("CartWidget", "ShoppingCart")
+    </div>
+
+    <div id="main" class="row panel">
+        <div class="col-xs-2 well">
+            <ul>
+                <li class="btn btn-block btn-default btn-lg">@Html.ActionLink("Home", "Index", "Home")</li>
+                <li class="btn btn-block btn-default btn-lg">@Html.ActionLink("Shop", "Index", "Shop")</li>
+                <li class="btn btn-block btn-default btn-lg">@Html.ActionLink("Cart", "Index", "ShoppingCart")</li>
+                <li class="btn btn-block btn-default btn-lg">@Html.ActionLink("Login", "Index", "Login")</li>
+                <li class="btn btn-block btn-default btn-lg">@Html.ActionLink("Register", "Index", "Register")</li>
+            </ul>
+        </div>
+
+        <div class="col-xs-9">
+            @RenderBody()
+        </div>
+    </div>
+</body>
+</html>

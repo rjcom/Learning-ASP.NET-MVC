@@ -1,0 +1,26 @@
+﻿@model IEnumerable<int?>
+
+@{
+    ViewBag.Title = "Categories";
+}
+
+<h2>Categories</h2>
+<div>Category Count = @ViewBag.CategoryCount</div>
+<table class="table">
+    <tr>
+        <th>
+            Category IDs
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.Label(item.ToString())
+            </td>
+        </tr>
+    }
+
+</table>
+

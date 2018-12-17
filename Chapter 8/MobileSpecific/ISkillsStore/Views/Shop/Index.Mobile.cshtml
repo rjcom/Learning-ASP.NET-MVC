@@ -1,0 +1,24 @@
+﻿@model ISkillsStore.Models.ProductsModel
+
+@{
+    ViewBag.Title = "ISkills Shop";
+}
+
+@using (Html.BeginForm("Index", "Shop", FormMethod.Post, new { id = "ShopForm" }))
+{
+    @Html.HiddenFor(x => x.Pagination.CurrentPage);
+    @Html.HiddenFor(x => x.Pagination.ItemsPerPage);
+    @Html.HiddenFor(x => x.Pagination.TotalItems);
+
+    <div class="well">
+        @Html.TextBoxFor(x => x.SearchString)
+        <input type="submit" value="Search" />
+    </div>
+    foreach (var item in Model.Products)
+    {
+        @Html.Partial("Product", item)
+    }
+    <div class="btn-group pull-right">
+        @Html.PageLinks(Model.Pagination, x => Url.Action("Index", new { page = x, categoryID = Model.CategoryID }))
+    </div>
+}

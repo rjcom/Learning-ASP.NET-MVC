@@ -1,0 +1,32 @@
+﻿@model ISkillsStore.Models.ProductsModel
+
+@{
+    ViewBag.Title = "ISkills Shop";
+}
+
+<h2>
+    Online Store
+</h2>
+@using (Html.BeginForm("Index", "Shop", FormMethod.Post, new { id = "ShopForm" }))
+{
+    @Html.HiddenFor(x => x.Pagination.CurrentPage);
+    @Html.HiddenFor(x => x.Pagination.ItemsPerPage);
+    @Html.HiddenFor(x => x.Pagination.TotalItems);
+    <div>
+        Category:
+        @Html.DropDownListFor(x => x.CategoryID, Model.Categories(), "--Select a Category--",
+        new
+        {
+            onchange = "document.getElementById('ShopForm').submit();"
+        })
+    </div>
+
+    foreach (var item in Model.Products)
+    {
+        @Html.Partial("Product", item)
+    }
+
+    <div class="btn-group pull-right">
+        @Html.PageLinks(Model.Pagination, x => Url.Action("Index", new { page = x, categoryID = Model.CategoryID }))
+    </div>
+}

@@ -1,0 +1,21 @@
+﻿@model ISkillsStore.Models.Product
+
+<div class="row panel">
+    <div class="col-xs-4">
+        <img src="@Model.Image" alt="@Model.ProductName" title="@Model.ProductName">
+    </div>
+    <div class="well col-xs-8">
+        <h3>
+            @Html.DisplayFor(modelItem => Model.ProductName)
+        </h3>
+        <p>
+            @Html.DisplayFor(modelItem => Model.Description)
+        </p>
+        <p class="pull-right label label-primary">
+            $@Html.DisplayFor(modelItem => Model.Price)
+        </p>
+        <p>
+            @Html.ActionLink("More Info", "Index", "ItemDetail", new { id = Model.ProductID }, new { id = "ProductID" })
+        </p>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+﻿@model ISkillsStore.Models.ProductsModel
+
+@{
+    ViewBag.Title = "ISkills Shop";
+}
+
+<h2>
+    Online Store
+</h2>
+@foreach (var item in Model.Products)
+{
+    <div style="display:inline-block">
+        <div style="width:30%; float:left;">
+            <img src="@item.Image" width="170" height="276" alt="@item.ProductName" title="@item.ProductName">
+        </div>
+        <div style="width:70%; float:left;">
+            <h3>
+                @Html.DisplayFor(modelItem => item.ProductName)
+            </h3>
+            <p>
+                @Html.DisplayFor(modelItem => item.Description)
+            </p>
+            <p>
+                $@Html.DisplayFor(modelItem => item.Price)
+            </p>
+            <p>
+                @Html.ActionLink("More Info", "Index", "ItemDetail", new { id = item.ProductID }, new { id = "ProductID" })
+            </p>
+        </div>
+    </div>
+}
+
+<div class="pager">
+    @Html.PageLinks(Model.Pagination, x => Url.Action("Index", new { page = x }))
+</div>

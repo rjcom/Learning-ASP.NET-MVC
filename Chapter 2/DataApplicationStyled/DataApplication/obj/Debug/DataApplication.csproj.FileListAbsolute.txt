@@ -1,0 +1,2 @@
+C:\Users\toor\Downloads\Learning ASP.NET MVC\Learning ASP.Net MVC - Working Files\Chapter 2\DataApplicationStyled\DataApplication\obj\Debug\DataApplication.csprojAssemblyReference.cache
+C:\Users\toor\Downloads\Learning ASP.NET MVC\Learning ASP.Net MVC - Working Files\Chapter 2\DataApplicationStyled\DataApplication\obj\Debug\DataApplication.csproj.CoreCompileInputs.cache
